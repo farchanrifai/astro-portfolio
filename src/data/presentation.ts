@@ -6,29 +6,34 @@ type Social = {
 type Presentation = {
   mail: string;
   title: string;
-  description: string;
+  description1: string;
+  description2: string;
   socials: Social[];
   profile?: string;
 };
 
 const presentation: Presentation = {
-  mail: "maxencewolff.pro@gmail.com",
-  title: "Hi, I’m Maxence 👋",
+  mail: "hi@farchan.co",
+  title: "Hi, I’m Farchan 👋",
   // profile: "/profile.webp",
-  description:
-    "Bonjour, i'm a *french frontend developer* with over *3 years* of web experience. I am currently working with *NextJS and Typescript*. Outside of work I complete my pokemon card collection and learning TypeScript.",
-  socials: [
+  description1:
+    "Whether you’re a friend stopping by for a virtual hangout or someone eager to collaborate with me, I’m stoked to have you here!",
+  description2:
+    "This site is where the magic happens – a mix of all things cool and professional. This is the place to be for random blog posts about absolutely anything under the sun.",
+  description3:
+    " To all you awesome folks interested in working with me, let's get in touch ↯",
+    socials: [
     {
-      label: "X",
-      link: "https://twitter.com/itsstormzz_",
+      label: "Email",
+      link: "mailto:hi@farchan.co",
     },
     {
-      label: "Bento",
-      link: "https://bento.me/m-wolff",
+      label: "Linkedin",
+      link: "https://linkedin.com/in/farchanrifai",
     },
     {
-      label: "Github",
-      link: "https://github.com/MaeWolff",
+      label: "Instagram",
+      link: "https://instagram.com/farchanrifai",
     },
   ],
 };

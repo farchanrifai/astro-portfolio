@@ -18,6 +18,7 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
 
 <Layout>
   <main class="flex flex-col gap-20">
+  <main class="flex flex-col gap-10">
     <article
       class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12"
     >
@@ -30,16 +31,24 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
         )
       }
 
-      <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-6">
         <h1 class="text-3xl text-neutral-100">
           {presentation.title}
         </h1>
-
+        <div class="flex flex-col gap-2">
         <h2
-          class="w-auto max-w-[60ch] leading-6"
-          set:html={convertAsteriskToStrongTag(presentation.description)}
+          class="w-auto max-w-[70ch] leading-6" white-space: pre-line
+          set:html={convertAsteriskToStrongTag(presentation.description1)}
         />
-
+        <h2
+          class="w-auto max-w-[70ch] leading-62" white-space: pre-line
+          set:html={convertAsteriskToStrongTag(presentation.description2)}
+        />
+          <h2
+          class="w-auto max-w-[70ch] leading-62" white-space: pre-line
+          set:html={convertAsteriskToStrongTag(presentation.description3)}
+        />
+        </div>
         <SocialLinks />
       </div>
     </article>
@@ -47,7 +56,7 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
     <article class="flex flex-col gap-8">
       <header class="flex w-full flex-row justify-between gap-2">
         <h3 class="text-lg text-neutral-100">Latest posts</h3>
-        <Link href="/posts" label="See all posts" isUnderline target="_self" />
+        <Link href="/posts" label="See all" isUnderline target="_self" />
       </header>
       {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
@@ -67,35 +76,20 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
         }
       </section>
     </article>
-
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">
-          Selected projects ({projects.length})
-        </h3>
+  </main>
+    <article class="flex flex-col gap-2">
+      <header class="flex w-full flex-row justify-between gap-1">
+        <h3 class="text-lg text-neutral-80">------</h3>
       </header>
-      {projects.length === 0 && <p>Oops, I must work^^^^^</p>}
-
-      <section class="flex flex-col gap-4">
-        {
-          projects.length !== 0 &&
-            projects.map((project) => <ProjectCard {...project} />)
-        }
-      </section>
-    </article>
-
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Get in touch</h3>
-      </header>
+      <!---
       <p>
         Email me at <Link
           href={`mailto:${presentation.mail}`}
           label={presentation.mail}
         /> or follow me via my social links.
       </p>
-
       <SocialLinks />
+      --->
     </article>
   </main>
 </Layout>
