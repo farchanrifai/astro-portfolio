@@ -21,12 +21,13 @@ const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
-  <main class="ms-20 flex flex-col gap-4">
+  <main class="post mx-auto flex w-full max-w-prose flex-col gap-4">
     <p class="flex-col gap-10">
     <header role="presentation">
-      <h1 class="text-md, strong" style="font-size:20px">
+      <h1 class="text-md, strong" style="font-size:30px">
         <b>{post.data.title} </b>
       </h1>
+      <p></p>
       <!--<p style="font-size:11px">Farchan - {formatDate(post.data.publishedAt)} </p>-->
       <!--<p class="italic">{post.data.description}</p>-->
     </header>
