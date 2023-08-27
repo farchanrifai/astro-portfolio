@@ -23,7 +23,7 @@ const { Content } = await post.render();
 <Layout title={post.data.title} description={post.data.description}>
   <main class="post mx-auto flex w-full max-w-prose flex-col gap-4">
     <header role="presentation">
-      <h1 class="text-md gap-4" style="font-size:30px">
+      <h1 class="text-md gap-0" style="font-size:30px">
         <b> {post.data.title} </b>
       </h1>
       <p class="italic">{post.data.description}</p>
