@@ -59,3 +59,10 @@
 .p-3 {
   padding: $spacer !important;
 }
+
+hr {
+  width: 80%;
+  margin-top: 5px;
+  margin-left: 0;
+  opacity: 35%;
+}
