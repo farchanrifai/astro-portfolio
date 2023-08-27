@@ -26,14 +26,14 @@ const { Content } = await post.render();
       <h1 class="text-md gap-0" style="font-size:30px">
         <b> {post.data.title} </b>
       </h1>
-      <p class="italic">{post.data.description}</p>
+      <!--<p class="italic">{post.data.description}</p>-->
+      <p class="subText" style="font-size:12px">Farchan - {formatDate(post.data.publishedAt)} </p>
       <hr>
     </header>
     <Content />
     <p></p>
     <article>
-      <p class="italic">-------</p>
-      <p style="font-size:13px">Farchan - {formatDate(post.data.publishedAt)} </p>
+      <p align="center">&#9772;</p>
       <!--<p class="italic">{post.data.description}</p>-->
     </article>
   </main>

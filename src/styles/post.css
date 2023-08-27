@@ -61,8 +61,13 @@
 }
 
 hr {
-  width: 80%;
+  width: 20%;
   margin-top: 5px;
   margin-left: 0;
+  opacity: 35%;
+}
+
+.post subText {
+  margin-top: 10px;
   opacity: 35%;
 }
